@@ -4,10 +4,6 @@ export default defineNuxtConfig({
   // Pre-renders pages at build time for faster load times and better SEO
   ssr: true,
 
-  // Target: 'static' for full static site generation (SSG)
-  // Suitable for hosting on static hosting services like Azure Static Web Apps
-  target: "static",
-
   // Application configuration
   app: {
     // Base URL of the application
@@ -62,17 +58,7 @@ export default defineNuxtConfig({
     // Image optimization module for Nuxt 3
     "@nuxt/image",
     // ESLint module for linting during development
-    "@nuxtjs/eslint-module",
-    // Add other Nuxt modules if needed
   ],
-
-  // ESLint module configuration
-  eslint: {
-    // Automatically lint your code on save
-    fix: true,
-    // Exclude specific directories from linting
-    exclude: ["node_modules", "dist"],
-  },
 
   // Image optimization configuration
   image: {
@@ -160,4 +146,6 @@ export default defineNuxtConfig({
 
   // Disable Nuxt DevTools in production for better performance
   devtools: { enabled: false },
+
+  compatibilityDate: "2024-09-22",
 });
