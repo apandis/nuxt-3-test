@@ -94,17 +94,8 @@ export default defineNuxtConfig({
   vite: {
     // Configure build options for better performance
     build: {
-      // Disable source maps in production for smaller build size and better security
       sourcemap: false,
-      rollupOptions: {
-        output: {
-          // Manual code splitting for better caching and performance
-          manualChunks: {
-            // Split vendor code (Vue and Vue Router) into a separate chunk
-            vendor: ["vue", "vue-router"],
-          },
-        },
-      },
+      // Remove the rollupOptions.output.manualChunks configuration
     },
   },
 
